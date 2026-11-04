@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Outfit:wght@100..900&display=swap');
+
+@import "tailwindcss";
+
+:root {
+  font-family: "Manrope", "Outfit", sans-serif;
+  color: #f8fafc;
+  background: #080b14;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: #080b14;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+::selection {
+  background: #7c3aed;
+  color: white;
+}
+
+.movie-scroll {
+  scrollbar-width: none;
+}
+
+.movie-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.poster-overlay {
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.95),
+    rgba(0, 0, 0, 0.08) 75%
+  );
+}
+
+.hero-overlay {
+  background:
+    linear-gradient(90deg, #080b14 5%, rgba(8, 11, 20, 0.8) 42%, transparent 100%),
+    linear-gradient(0deg, #080b14 0%, transparent 65%);
+}
+
+@media (max-width: 640px) {
+  .hero-overlay {
+    background: linear-gradient(
+      0deg,
+      #080b14 5%,
+      rgba(8, 11, 20, 0.8) 55%,
+      rgba(8, 11, 20, 0.25)
+    );
+  }
+}
